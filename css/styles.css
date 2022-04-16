@@ -156,7 +156,7 @@ h2 {
 .header-contact {
   display: flex;
   margin-left: auto;
-  align-items: baseline;
+  align-items: baseline; 
 
   font-weight: 500;
   font-size: 14px;
@@ -180,7 +180,8 @@ h2 {
   display: inline-block;
   margin-right: 10px;
   background-size: contain;
-  background-position: center;
+  /* background-position: center; спросить у ментора*/
+  vertical-align: middle;  
 }
 
 .mail::before {
@@ -270,6 +271,35 @@ h1 {
   width: 270px;
 }
 
+.features-list .item::before {
+  content: "";
+  display: inline-block;
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-radar::before {
+  background-image: url('../images/radar.svg');
+}
+
+.icon-clock::before {
+  background-image: url('../images/clock.svg');
+}
+
+.icon-diagram::before {
+  background-image: url('../images/diagram.svg');
+}
+
+.icon-astronaut::before {
+  background-image: url('../images/astronaut.svg');
+}
+
 .features p {
   margin: 0;
 
@@ -279,6 +309,8 @@ h1 {
 
   color: var(--secondary-text-color);
 }
+
+
 
 /* секция employment */
 
@@ -340,7 +372,36 @@ h1 {
   color: var(--secondary-text-color);
 }
 
+/* секция clients */
+
+.clients-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+}
+
+.clients-list .item {
+  display: block;
+  padding: 16px 32px;
+  margin-top: 50px;
+
+  border: 1px solid #AFB1B8;
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.clients-list .item:hover,
+.clients-list .item:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+
 /* секция footer */
+
 footer {
   padding: 60px 0;
 
@@ -386,7 +447,9 @@ footer a:hover {
   color: var(--accent-color);
 }
 
-/* Страница примеры работ */
+
+
+          /* Страница примеры работ */
 
 .filter-list {
   display: flex;
