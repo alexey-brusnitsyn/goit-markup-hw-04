@@ -263,7 +263,7 @@ h1 {
 
 .features-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
@@ -271,33 +271,13 @@ h1 {
   width: 270px;
 }
 
-.features-list .item::before {
-  content: "";
-  display: inline-block;
+.features-list .icon  {
   height: 120px;
-  width: 270px;
   margin-bottom: 30px;
+  padding: 25px 100px;
 
   background-color: #F5F4FA;
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-radar::before {
-  background-image: url('../images/radar.svg');
-}
-
-.icon-clock::before {
-  background-image: url('../images/clock.svg');
-}
-
-.icon-diagram::before {
-  background-image: url('../images/diagram.svg');
-}
-
-.icon-astronaut::before {
-  background-image: url('../images/astronaut.svg');
 }
 
 .features p {
@@ -309,8 +289,6 @@ h1 {
 
   color: var(--secondary-text-color);
 }
-
-
 
 /* секция employment */
 
@@ -367,10 +345,35 @@ h1 {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
-
+  margin-bottom: 16px;
 
   color: var(--secondary-text-color);
 }
+
+.social-icon {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  cursor: pointer;
+}
+
+.social-icon .item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--secondary-text-color);
+}
+
+.social-icon .item:hover,
+.social-icon .item:focus {
+  background-color: var(--accent-color);
+  fill: var(--invert-text-color);
+}
+
+
 
 /* секция clients */
 
