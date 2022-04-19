@@ -68,6 +68,13 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 /* хедер */
 .page-header {
   background-color: var(--background-main);
@@ -120,7 +127,7 @@ h2 {
   display: flex;
 }
 
-.main-nav .item:not(last-child) {
+.main-nav .item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -156,7 +163,7 @@ h2 {
 .header-contact {
   display: flex;
   margin-left: auto;
-  align-items: baseline; 
+  align-items: baseline;
 
   font-weight: 500;
   font-size: 14px;
@@ -164,36 +171,28 @@ h2 {
   letter-spacing: 0.02em;
 
   color: var(--secondary-text-color);
+  fill: var(--secondary-text-color);
 }
 
 .header-contact li + li {
   margin-left: 50px;
+  
 }
 
-.header-contact a:hover {
-  color: var(--accent-color);
-}
-
-.mail::before,
-.tel::before {
-  content: "";
-  display: inline-block;
+.mail
+.tel {
+  display: flex;
   margin-right: 10px;
-  background-size: contain;
-  /* background-position: center; спросить у ментора*/
-  vertical-align: middle;  
+  align-items: baseline;
+
+  color: currentColor;
 }
 
-.mail::before {
-  width: 16px;
-  height: 12px;
-  background-image: url('../images/mail.svg');
-}
+.mail:hover,
+.tel:hover, .header-contact a:hover {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 
-.tel::before {
-  width: 10px;
-  height: 16px;
-  background-image: url('../images/tel.svg');
 }
 
 /* секция hero */
@@ -255,10 +254,6 @@ h1 {
 
 .features h3 {
   margin-bottom: 10px;
-
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 .features-list {
@@ -342,33 +337,39 @@ h1 {
 }
 
 .team h3 {
+  margin-bottom: 16px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
-  margin-bottom: 16px;
+  text-transform:none;
 
   color: var(--secondary-text-color);
 }
 
-.social-icon {
+.social {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.social-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--invert-text-color);  
+  fill: var(--secondary-text-color);
+  border-radius: 50%;
 
   cursor: pointer;
 }
 
-.social-icon .item {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  fill: var(--secondary-text-color);
-}
-
-.social-icon .item:hover,
-.social-icon .item:focus {
+.social-link:hover {
   background-color: var(--accent-color);
   fill: var(--invert-text-color);
 }
@@ -384,24 +385,23 @@ h1 {
 
 }
 
-.clients-list .item {
+.clients-link {
   display: block;
   padding: 16px 32px;
   margin-top: 50px;
 
+  fill: var(--secondary-text-color);
   border: 1px solid #AFB1B8;
-  /* box-sizing: border-box; */
   border-radius: 4px;
 
   cursor: pointer;
 }
 
-.clients-list .item:hover,
-.clients-list .item:focus {
-  color: var(--accent-color);
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
   border-color: var(--accent-color);
 }
-
 
 /* секция footer */
 
@@ -409,6 +409,11 @@ footer {
   padding: 60px 0;
 
   background: var(--background);
+}
+
+.wrapper {
+  display:flex;
+  flex-wrap: nowrap;
 }
 
 .logo-footer {
@@ -451,8 +456,46 @@ footer a:hover {
 }
 
 
+.social-footer {
+  margin-top: 12px;
+  margin-left: 70px;  
+}
 
-          /* Страница примеры работ */
+.social-footer h3 {
+color: var(--invert-text-color);
+}
+
+.social-footer-list {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 20px;  
+}
+
+.social-footer-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--invert-text-color);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.social-footer .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-footer-link:hover {
+  background-color: var(--accent-color);
+}
+
+
+
+  /* Страница примеры работ */
 
 .filter-list {
   display: flex;
