@@ -9,6 +9,8 @@
   --background: #2f303a;
   --bg-work-btn: #f5f4fa;
   --border-prt: #eeeeee;
+  --background-content: #AFB1B8;
+  --bg-link: rgba(255, 255, 255, 0.6);
 }
 
 /* глобальные настройки */
@@ -153,6 +155,8 @@ h3 {
 .main-nav .link:hover,
 .main-nav .link:focus {
   color: var(--accent-color);
+  outline: none;
+
 }
 
 /* цвет меню текущей страницы */
@@ -179,20 +183,31 @@ h3 {
   
 }
 
-.mail
-.tel {
-  display: flex;
-  margin-right: 10px;
-  align-items: baseline;
+.header-contact .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-left: 10px;
+}
 
+.block {
+  display: flex;
+  align-items: center;
   color: currentColor;
 }
 
-.mail:hover,
-.tel:hover, .header-contact a:hover {
+.block:hover,
+.link:hover {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.block:focus,
+.link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 
+  outline: none;
 }
 
 /* секция hero */
@@ -232,6 +247,7 @@ h1 {
   height: 50px;
   padding: 10px 32px;
 
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   align-items: center;
@@ -266,13 +282,21 @@ h1 {
   width: 270px;
 }
 
-.features-list .icon  {
+.features-list .box-icon  {
+  display: flex;
   height: 120px;
-  margin-bottom: 30px;
-  padding: 25px 100px;
+  justify-content: center;
+  align-items: center;
 
+  margin-bottom: 30px;
+  
   background-color: #F5F4FA;
   border-radius: 4px;
+}
+
+.icon {
+  width: 70px;
+  height: 70px;
 }
 
 .features p {
@@ -363,15 +387,17 @@ h1 {
   justify-content: center;
 
   color: var(--invert-text-color);  
-  fill: var(--secondary-text-color);
+  fill: var(--background-content);
   border-radius: 50%;
 
   cursor: pointer;
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   background-color: var(--accent-color);
   fill: var(--invert-text-color);
+  outline: none;
 }
 
 
@@ -381,17 +407,22 @@ h1 {
 .clients-list {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  margin-top: 50px;
+}
 
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .clients-link {
-  display: block;
-  padding: 16px 32px;
-  margin-top: 50px;
+  display: flex;
+  width: 172px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
 
-  fill: var(--secondary-text-color);
-  border: 1px solid #AFB1B8;
+  fill: var(--background-content);
+  border: 1px solid var(--background-content);
   border-radius: 4px;
 
   cursor: pointer;
@@ -401,13 +432,13 @@ h1 {
 .clients-link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
+  outline: none;
 }
 
 /* секция footer */
 
 footer {
   padding: 60px 0;
-
   background: var(--background);
 }
 
@@ -420,6 +451,7 @@ footer {
   display: inline-block;
   margin-bottom: 20px;
 
+  font-weight: 700;
   font-family: 'Raleway';
   font-size: 26px;
   line-height: 1.19;
@@ -443,16 +475,20 @@ footer address {
   color: var(--invert-text-color);
 }
 
-footer .list {
-  font-weight: 400;
+.contact-footer .link {
   font-size: 14px;
   line-height: 1.71;
 
   color: rgba(255, 255, 255, 0.6);
 }
+.contact-footer li:not(:last-child) {
+  margin-bottom: 9px;
+}
 
-footer a:hover {
+footer a:hover,
+footer a:focus {
   color: var(--accent-color);
+  outline: none;
 }
 
 
@@ -489,11 +525,12 @@ color: var(--invert-text-color);
   margin-right: 10px;
 }
 
-.social-footer-link:hover {
+.social-footer-link:hover,
+.social-footer-link:focus {
+  fill: var(--invert-text-color);
   background-color: var(--accent-color);
+  outline: none;
 }
-
-
 
   /* Страница примеры работ */
 
@@ -521,13 +558,16 @@ color: var(--invert-text-color);
   cursor: pointer;
 }
 
-.work-btn:hover {
+.work-btn:hover,
+.work-btn:focus {
   color: var(--invert-text-color);
   background: var(--accent-color);
+  outline: none;
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+
 }
 
 .work-list {
@@ -549,10 +589,12 @@ color: var(--invert-text-color);
   margin-right: 0;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
   0px 4px 4px rgba(0, 0, 0, 0.06),
   1px 4px 6px rgba(0, 0, 0, 0.16);
+  outline: none;
 }
 
 
