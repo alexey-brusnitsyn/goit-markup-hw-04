@@ -475,6 +475,12 @@ footer address {
   color: var(--invert-text-color);
 }
 
+footer address:hover,
+footer address:focus {
+  color: var(--accent-color);
+  outline: none;
+}
+
 .contact-footer .link {
   font-size: 14px;
   line-height: 1.71;
@@ -485,8 +491,8 @@ footer address {
   margin-bottom: 9px;
 }
 
-footer a:hover,
-footer a:focus {
+.contact-footer a:hover,
+.contact-footer a:focus {
   color: var(--accent-color);
   outline: none;
 }
